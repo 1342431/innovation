@@ -16,12 +16,25 @@ const Sector4 = () => {
         { column12: ['c9', 'c10', 'c11', 'c12', 'c13', 'c14', 'c15', 'c16'] },
         { column13: ['c9', 'c10', 'c11', 'c12', 'c13', 'c14', 'c15', 'c16'] }
     ];
+    const columnColors = [
+        '#81c784',
+        '#8B4513',
+        '#64b5f6',
+        '#64b5f6',
+        '#ff8a65',
+        '#ff8a65',
+        '',
+        '#81c784',
+        '#8B4513',
+        '#64b5f6',
+        '#64b5f6',
+        '#ff8a65',
+        '#ff8a65',
+      ];
     const [selectedCircles, setSelectedCircles] = useState(circles);
 
-    // Helper to get column key by index
     const getColumnKey = (idx) => `column${idx + 1}`;
 
-    // Generalized handler for any column
     const handleCircleClick = (colIdx, clickedCircle) => {
         const circleNum = parseInt(clickedCircle.replace('c', ''));
         let newColumn = [];
@@ -57,7 +70,6 @@ const Sector4 = () => {
         });
     };
 
-    // Render columns dynamically
     return (
         <div id='sector4'>
             {selectedCircles.map((col, colIdx) => {
@@ -75,7 +87,7 @@ const Sector4 = () => {
                 } else {
                     const colKey = getColumnKey(colIdx);
                     return (
-                        <div key={colKey} id={colKey} className="sector1Columns">
+                        <div key={colKey} id={colKey} className="sectorColumns">
                             {[...Array(16)].map((_, i) => {
                                 const circleId = `c${i + 1}`;
                                 return (
@@ -83,7 +95,7 @@ const Sector4 = () => {
                                         key={circleId}
                                         className='circle'
                                         id={circleId}
-                                        style={{ backgroundColor: col[colKey].includes(circleId) ? 'red' : '' }}
+                                        style={{ backgroundColor: col[colKey].includes(circleId) ? columnColors[colIdx] : '' }}
                                         onClick={() => handleCircleClick(colIdx, circleId)}
                                     ></div>
                                 );

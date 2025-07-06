@@ -43,13 +43,33 @@
 
 .innovationDiv {
   width: 1300px;
-  height: 750px;
+  height: 775px;
   border: 0.5px solid white;
   display: flex;
   flex-direction: column;
 }
 
-#sector1, #sector2 {
+#sector1 {
+  width: 1300px;
+  height: 75px;
+  display: flex;
+  flex-direction: row;
+}
+
+#numbers {
+  width: 1300px;
+  height: 25px;
+  display: flex;
+  flex-direction: row;
+  div {
+    background-color: rgb(100, 100, 100);
+  }
+  span {
+    color: white; 
+   }
+}
+
+#sector2 {
   width: 1300px;
   height: 75px;
   display: flex;
@@ -83,9 +103,18 @@
   border-bottom: none !important;
 }
 
-.sector1Columns {
+.sectorColumns {
   padding-top: 10px;
   padding-bottom: 10px;
+  width: 100px;
+  border: 0.5px solid white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.numbersColumns {
   width: 100px;
   border: 0.5px solid white;
   display: flex;
@@ -116,11 +145,7 @@
   width: 75px;
 }
 
-.blue {
-  background-color: blue;
-}
-
 .heading {
-  margin-top: 10px !important;
-  margin-bottom: 10px !important;
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
 }
