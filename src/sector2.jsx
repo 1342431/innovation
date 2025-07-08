@@ -16,8 +16,8 @@ const Sector2 = () => {
                 <div className='circle' id="c2" style={{ backgroundColor: selectedCircles.includes('c2') ? '#81c784' : '' }} onClick={() => handleCircleClick('c1', 'c2')}></div>
             </div>
             <div id='column2' className="sectorColumns">
-                <div className='circle' id="c3" style={{ backgroundColor: selectedCircles.includes('c3') ? '#8B4513' : '' }} onClick={() => handleCircleClick('c4', 'c3')}></div>
-                <div className='circle' id="c4" style={{ backgroundColor: selectedCircles.includes('c4') ? '#8B4513' : '' }} onClick={() => handleCircleClick('c3', 'c4')}></div>
+                <div className='circle' id="c3" style={{ backgroundColor: selectedCircles.includes('c3') ? 'pink' : '' }} onClick={() => handleCircleClick('c4', 'c3')}></div>
+                <div className='circle' id="c4" style={{ backgroundColor: selectedCircles.includes('c4') ? 'pink' : '' }} onClick={() => handleCircleClick('c3', 'c4')}></div>
             </div>
             <div id='column3' className="sectorColumns">
                 <div className='circle' id="c5" style={{ backgroundColor: selectedCircles.includes('c5') ? '#64b5f6' : '' }} onClick={() => handleCircleClick('c6', 'c5')}></div>
@@ -48,8 +48,8 @@ const Sector2 = () => {
                 <div className='circle' id="c16" style={{ backgroundColor: selectedCircles.includes('c16') ? '#81c784' : '' }} onClick={() => handleCircleClick('c15', 'c16')}></div>
             </div>
             <div id='column9' className="sectorColumns">
-                <div className='circle' id="c17" style={{ backgroundColor: selectedCircles.includes('c17') ? '#8B4513' : '' }} onClick={() => handleCircleClick('c18', 'c17')}></div>
-                <div className='circle' id="c18" style={{ backgroundColor: selectedCircles.includes('c18') ? '#8B4513' : '' }} onClick={() => handleCircleClick('c17', 'c18')}></div>
+                <div className='circle' id="c17" style={{ backgroundColor: selectedCircles.includes('c17') ? 'pink' : '' }} onClick={() => handleCircleClick('c18', 'c17')}></div>
+                <div className='circle' id="c18" style={{ backgroundColor: selectedCircles.includes('c18') ? 'pink' : '' }} onClick={() => handleCircleClick('c17', 'c18')}></div>
             </div>
             <div id='column10' className="sectorColumns">
                 <div className='circle' id="c19" style={{ backgroundColor: selectedCircles.includes('c19') ? '#64b5f6' : '' }} onClick={() => handleCircleClick('c20', 'c19')}></div>

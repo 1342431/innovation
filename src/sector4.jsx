@@ -18,14 +18,14 @@ const Sector4 = () => {
     ];
     const columnColors = [
         '#81c784',
-        '#8B4513',
+        'pink',
         '#64b5f6',
         '#64b5f6',
         '#ff8a65',
         '#ff8a65',
         '',
         '#81c784',
-        '#8B4513',
+        'pink',
         '#64b5f6',
         '#64b5f6',
         '#ff8a65',

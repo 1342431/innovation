@@ -1,8 +1,25 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 2rem;
+  max-width: 1041px;
   text-align: center;
+  margin-left: 20px;
+}
+
+/* Theme variables - default to dark theme */
+:root {
+  --border-color: white;
+  --text-color: white;
+  --background-color: transparent;
+  --textbg-color: #646464;
+}
+
+/* Light theme - automatically applied when user prefers light mode */
+@media (prefers-color-scheme: light) {
+  :root {
+    --border-color: black;
+    --text-color: black;
+    --background-color: transparent;
+    --textbg-color: #c9c9c9;
+  }
 }
 
 .logo {
@@ -44,9 +61,12 @@
 .innovationDiv {
   width: 1300px;
   height: 775px;
-  border: 0.5px solid white;
+  border: 0.5px solid var(--border-color);
   display: flex;
   flex-direction: column;
+  transform: scale(0.8);
+  transform-origin: top left;
+  margin-left: 0;
 }
 
 #sector1 {
@@ -62,10 +82,10 @@
   display: flex;
   flex-direction: row;
   div {
-    background-color: rgb(100, 100, 100);
+    background-color: var(--textbg-color);
   }
   span {
-    color: white; 
+    color: var(--text-color); 
    }
 }
 
@@ -99,7 +119,7 @@
 }
 
 #sector1, #sector2, #sector3, #sector4 {
-  border: 0.5px solid white;
+  border: 0.5px solid var(--border-color);
   border-bottom: none !important;
 }
 
@@ -107,7 +127,7 @@
   padding-top: 10px;
   padding-bottom: 10px;
   width: 100px;
-  border: 0.5px solid white;
+  border: 0.5px solid var(--border-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -116,7 +136,7 @@
 
 .numbersColumns {
   width: 100px;
-  border: 0.5px solid white;
+  border: 0.5px solid var(--border-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -125,7 +145,7 @@
 
 .sector3Columns {
   width: 100px;
-  border: 0.5px solid white;
+  border: 0.5px solid var(--border-color);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -137,7 +157,7 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  border: 1px solid white;
+  border: 1px solid var(--border-color);
 }
 
 #operatorDropdown {
@@ -148,4 +168,17 @@
 .heading {
   margin-top: 5px !important;
   margin-bottom: 5px !important;
+  color: var(--text-color);
+}
+
+.headerDiv {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  justify-content: space-between;
+  align-items: center;
+  #appSelectDropdown {
+    width: 150px;
+  }
 }
