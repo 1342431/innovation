@@ -7,6 +7,7 @@ import Sector4 from './sector4';
 import Numbers from './numbers';
 import Sector3App2 from './sector3App2';
 import Sector5App2 from './Sector5App2';
+import Sector4App3 from './sector4App3';
 
 function App() {
   const [selectedApp, setSelectedApp] = useState('mathematical concept kit');
@@ -17,6 +18,7 @@ function App() {
         <select id="appSelectDropdown" onChange={e => setSelectedApp(e.target.value)} value={selectedApp}>
           <option value="mathematical concept kit">MCK</option>
           <option value="algebric mathematical concept kit">Algebric MCK</option>
+          <option value="convertions and calculations concept kit">C&C MCK</option>
         </select>
       </div>
       <div className='innovationDiv'>
@@ -27,6 +29,9 @@ function App() {
           <Sector3 />
         ) : (
           <Sector3App2 />
+        )}
+        {selectedApp === 'convertions and calculations concept kit' && (
+          <Sector4App3 />
         )}
         <Sector4 />
         {selectedApp === 'algebric mathematical concept kit' && (
